@@ -80,15 +80,19 @@ function changeHeading() {
 
 function handleUserInput1(event) {
     let userInput = event.target.value;
+    let result = userInput;
 
-    if(switched) {
+    let teams = ['Red Sox', 'Cubs', 'Yankees', 'Dodgers', 'Angels'];
+
+
+    // if(switched) {
         // TODO: handle the input for one app version
-    } else {
+    // } else {
         // TODO:  handle the input for one app version
-    }
+        document.querySelector('#result').innerText = result;
 }
 
-function handleUserInput2(event) {
+function handleUserInput2(event) {P
     let userInput2 = event.target.value;
 }
 
