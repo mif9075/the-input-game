@@ -12,6 +12,7 @@ let heading = ''; // What should the heading start out as?
 // Set init to run when the window loads.
 window.onload = init;
 
+// Don't Touch
 function init() {
     // Make sure we're dealing with a clean slate.
     reset();
@@ -39,6 +40,8 @@ function init() {
         .addEventListener('click', switchGears)
 }
 
+
+// Don't Touch
 function reset() {
      input1 = '';
      input2 = '';
@@ -62,6 +65,8 @@ function reset() {
     document.querySelector('#result').innerText = result;
 }
 
+
+// Switching between apps.  Later Projects
 function switchGears() {
     // TODO: change the value:of 'switched' to the opposite of what it currently is
 
@@ -74,22 +79,38 @@ function switchGears() {
     changeHeading();
 }
 
+
+// Heading for the different Apps.
 function changeHeading() {
     document.querySelector('#heading').innerText = heading;
 }
 
+
+// Input for the Apps.
 function handleUserInput1(event) {
     let userInput = event.target.value;
-    let result = userInput;
 
+    // Change to input1
+    // let result = userInput;
+
+
+    // Outside Global Variables
     let teams = ['Red Sox', 'Cubs', 'Yankees', 'Dodgers', 'Angels'];
 
+    // Print Result
+    // let i = 0;
+
+    // while (i < result.length) {
+    //     if (result === teams[i]) {
+    //         console.log (teams[i]);
+    //     }
+    // }
 
     // if(switched) {
         // TODO: handle the input for one app version
     // } else {
         // TODO:  handle the input for one app version
-        document.querySelector('#result').innerText = result;
+        // document.querySelector('#result').innerText = result;
 }
 
 function handleUserInput2(event) {P
@@ -106,6 +127,8 @@ function handleUserInput5(event) {
     let userInput5 = event.target.value;
 }
 
+
+// Main Loops for different apps.
 function printResult() {
     document.querySelector('#result').innerText = result;
 }
