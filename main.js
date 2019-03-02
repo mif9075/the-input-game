@@ -12,8 +12,6 @@ let switched = false;
 //Codes
 let heading = ''; // What should the heading start out as?
 let answer = '';
-// let teams = ['red sox', 'cubs', 'yankees', 'dodgers', 'angels'];
-
 
 
 // Set init to run when the window loads.
@@ -136,32 +134,52 @@ function handleUserInput5(event) {
 // Main Loops for different apps.
 function printResult() {
 
+let team = ['red sox', 'cubs', 'yankees', 'dodgers', 'angels'];
+let i = 0;
+let count = 0;
+
 // Switch Statement
-if (input1.length > 0, input2.length > 0, input3.length > 0, input4.length > 0, input5.length > 0){
-    if (answer === 'red sox'){
-    result = "#1. Boston Red Sox's Total Payroll: 221 millions";
-    }
-    else if (answer === 'cubs'){
-    result = "#2. Chicago Cubs' Total Payroll: 210 millions";
-    }
-    else if (answer === 'yankees'){
-    result = "#3. New York Yankees' Total Payroll: 198 millions";
-    }
-    else if (answer === 'dodgers'){
-    result = "#4. Los Angeles Dodgers' Total Payroll: 193 millions";
-    }
-    else if (answer === 'angels'){
-    result = "#5. Los Angeles Angels' Total Payroll: 167 millions";
-    }
-    else {
-    result = 'Sorry! Team is not on the Top 5! Try Again!';
+if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length > 0 && input5.length > 0){
+
+    for (i = 0; i < team.length; i = i + 1){
+        if (input1 === team[i] || input2 === team[i] || input3 === team[i] ||input4 === team[i] || input5 === team[i]) {
+            count = count + 1;
+            result = count + ' Correct Matches';
+        }
+        
+        else {
+            result = 'Sorry! None of these teams are on the top 5.'
+        }
     }
 }
+
 else {
-    result = 'Continue typing input';
+        result = 'Continue typing input';
+    }
+
+        document.querySelector('#result').innerText = result;
+
 }
-    document.querySelector('#result').innerText = result;
-}
+
+
+    // result = "#1. Boston Red Sox's Total Payroll: 221 millions";
+    // }
+    // else if (answer === 'cubs'){
+    // result = "#2. Chicago Cubs' Total Payroll: 210 millions";
+    // }
+    // else if (answer === 'yankees'){
+    // result = "#3. New York Yankees' Total Payroll: 198 millions";
+    // }
+    // else if (answer === 'dodgers'){
+    // result = "#4. Los Angeles Dodgers' Total Payroll: 193 millions";
+    // }
+    // else if (answer === 'angels'){
+    // result = "#5. Los Angeles Angels' Total Payroll: 167 millions";
+    // }
+    // else {
+    // result = 'Sorry! Team is not on the Top 5! Try Again!';
+    // }
+
 
 
 // 6		San Francisco Giants 	40 	$143,592,777 	$21,000,000 	- 	- 	- 	$164,592,777
