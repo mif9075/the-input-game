@@ -144,19 +144,21 @@ if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length
     for (i = 0; i < team.length; i = i + 1){
         if (input1 === team[i] || input2 === team[i] || input3 === team[i] ||input4 === team[i] || input5 === team[i]) {
             count = count + 1;
-            result = count + ' Correct Matches';
+            
+            console.log(count);
         }
         
         else {
             result = 'Sorry! None of these teams are on the top 5.'
         }
+        result = count + ' Correct Matches';
     }
 }
 
-else {
+    else {
         result = 'Continue typing input';
     }
-
+        
         document.querySelector('#result').innerText = result;
 
 }
