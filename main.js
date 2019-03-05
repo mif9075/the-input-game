@@ -74,7 +74,7 @@ function switchGears() {
 
 
     if(switched === false) {
-        heading = 'Calculator Summation - Enter Five Numbers Below'; // TODO: change the heading to whatever would be appropriate for YOUR app.
+        heading = 'Calculator Summation - Enter Five Numbers Below.'
         switched = true;
     } else {
         heading = '2019 Baseball Payroll Tracker.\n  Guess The Top Five Basebal Franchises, With The Highest Payroll in the MLB.\n  Example: Atlanta Braves: Enter "Braves" Below.'
@@ -91,45 +91,61 @@ function changeHeading() {
 // Input for the Apps.
 function handleUserInput1(event) {
     let userInput = event.target.value;
-    input1 = userInput.toLowerCase();
-    answer = input1;
-    printResult();
+    if(switched) {
+        
 
-    // if(switched) {
-        // TODO: handle the input for one app version
-    // } else {
-        // TODO:  handle the input for one app version
-
-// Test
-// document.querySelector('#result').innerText = input1;
+    } else {
+        input1 = userInput.toLowerCase();
+        answer = input1;
+        printResult();
+    }
 }
-
 function handleUserInput2(event) {
     let userInput = event.target.value;
+    if(switched) {
+        
+
+    } else {
     input2 = userInput.toLowerCase();
     answer = input2;
     printResult();
+    }
 }
 
 function handleUserInput3(event) {
     let userInput = event.target.value;
+    if(switched) {
+        
+
+    } else {
     input3 = userInput.toLowerCase();
     answer = input3;
     printResult();
+    }
 }
 
 function handleUserInput4(event) {
     let userInput = event.target.value;
+    if(switched) {
+        
+
+    } else {
     input4 = userInput.toLowerCase();
     answer = input4;
     printResult();
+    }
 }
 
 function handleUserInput5(event) {
     let userInput = event.target.value;
+    if(switched) {
+        
+
+    } else {
     input5 = userInput.toLowerCase();
     answer = input5;
     printResult();
+    }
 }
 
 // Main Loops for different apps.
