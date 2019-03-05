@@ -74,6 +74,7 @@ function switchGears() {
 
     if(switched === false) {
         heading = 'Multiplication App. - Enter Five Numbers Below.'
+        reset();
         switched = true;
     } else {
         heading = '2019 Baseball Payroll Tracker.\n  Guess The Top Five Basebal Franchises, With The Highest Payroll in the MLB.\n  Example: Atlanta Braves: Enter "Braves" Below.'
