@@ -73,7 +73,7 @@ function switchGears() {
     // TODO: change the value:of 'switched' to the opposite of what it currently is
 
     if(switched === false) {
-        heading = 'Calculator Summation - Enter Five Numbers Below.'
+        heading = 'Multiplication App. - Enter Five Numbers Below.'
         switched = true;
     } else {
         heading = '2019 Baseball Payroll Tracker.\n  Guess The Top Five Basebal Franchises, With The Highest Payroll in the MLB.\n  Example: Atlanta Braves: Enter "Braves" Below.'
@@ -92,6 +92,7 @@ function handleUserInput1(event) {
     let userInput = event.target.value;
     if(switched === true) {
         input1 = userInput;
+        printResult();
 
     } else {
         input1 = userInput.toLowerCase();
@@ -103,6 +104,7 @@ function handleUserInput2(event) {
     let userInput = event.target.value;
     if(switched === true) {
         input2 = userInput;
+        printResult();
 
     } else {
         input2 = userInput.toLowerCase();
@@ -115,6 +117,7 @@ function handleUserInput3(event) {
     let userInput = event.target.value;
     if(switched === true) {
         input3 = userInput;
+        printResult();
 
     } else {
         input3 = userInput.toLowerCase();
@@ -127,6 +130,7 @@ function handleUserInput4(event) {
     let userInput = event.target.value;
     if(switched === true) {
         input4 = userInput;
+        printResult();
         
     } else {
     input4 = userInput.toLowerCase();
@@ -139,6 +143,7 @@ function handleUserInput5(event) {
     let userInput = event.target.value;
     if(switched === true) {
         input5 = userInput;
+        printResult();
 
     } else {
         input5 = userInput.toLowerCase();
@@ -150,8 +155,9 @@ function handleUserInput5(event) {
 // Main Loops for different apps.
 function printResult() {
     if (switched === true) {
-        if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length > 0 && input5.length > 0){
-
+        if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length > 0 && input5.length > 0)
+        {
+            result = input1 * input2 * input3 * input4 * input5;
         }
         else {
             result = 'Continue Typing Numbers';
@@ -171,8 +177,6 @@ if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length
     for (i = 0; i < team.length; i = i + 1){
         if (input1 === team[i] || input2 === team[i] || input3 === team[i] ||input4 === team[i] || input5 === team[i]) {
             count = count + 1;
-            
-            console.log(count);
         }
         
         else {
