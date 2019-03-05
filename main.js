@@ -72,7 +72,6 @@ function reset() {
 function switchGears() {
     // TODO: change the value:of 'switched' to the opposite of what it currently is
 
-
     if(switched === false) {
         heading = 'Calculator Summation - Enter Five Numbers Below.'
         switched = true;
@@ -91,8 +90,8 @@ function changeHeading() {
 // Input for the Apps.
 function handleUserInput1(event) {
     let userInput = event.target.value;
-    if(switched) {
-        
+    if(switched === true) {
+        input1 = userInput;
 
     } else {
         input1 = userInput.toLowerCase();
@@ -102,33 +101,33 @@ function handleUserInput1(event) {
 }
 function handleUserInput2(event) {
     let userInput = event.target.value;
-    if(switched) {
-        
+    if(switched === true) {
+        input2 = userInput;
 
     } else {
-    input2 = userInput.toLowerCase();
-    answer = input2;
-    printResult();
+        input2 = userInput.toLowerCase();
+        answer = input2;
+        printResult();
     }
 }
 
 function handleUserInput3(event) {
     let userInput = event.target.value;
-    if(switched) {
-        
+    if(switched === true) {
+        input3 = userInput;
 
     } else {
-    input3 = userInput.toLowerCase();
-    answer = input3;
-    printResult();
+        input3 = userInput.toLowerCase();
+        answer = input3;
+        printResult();
     }
 }
 
 function handleUserInput4(event) {
     let userInput = event.target.value;
-    if(switched) {
+    if(switched === true) {
+        input4 = userInput;
         
-
     } else {
     input4 = userInput.toLowerCase();
     answer = input4;
@@ -138,18 +137,29 @@ function handleUserInput4(event) {
 
 function handleUserInput5(event) {
     let userInput = event.target.value;
-    if(switched) {
-        
+    if(switched === true) {
+        input5 = userInput;
 
     } else {
-    input5 = userInput.toLowerCase();
-    answer = input5;
-    printResult();
+        input5 = userInput.toLowerCase();
+        answer = input5;
+        printResult();
     }
 }
 
 // Main Loops for different apps.
 function printResult() {
+    if (switched === true) {
+        if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length > 0 && input5.length > 0){
+
+        }
+        else {
+            result = 'Continue Typing Numbers';
+        }         
+        document.querySelector('#result').innerText = result;
+    } 
+
+    else if (switched === false) {
 
 let team = ['red sox', 'cubs', 'yankees', 'dodgers', 'angels'];
 let i = 0;
@@ -179,7 +189,7 @@ if (input1.length > 0 && input2.length > 0 && input3.length > 0 && input4.length
         document.querySelector('#result').innerText = result;
 
 }
-
+}
 
     // result = "#1. Boston Red Sox's Total Payroll: 221 millions";
     // }
